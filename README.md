@@ -17,6 +17,10 @@ For MHC-I tasks:
   ```bash
   python OnmiMHC-I.py IEDB.csv ./test/IEDB_predicted.csv
   ```
+  OnmiMHC can also use candidate peptides to predict across multiple candidate alleles to identify new antigenic peptides:
+  ```bash
+  python OnmiMHC_UCEC.py TCGA-UCEC_peptides_9.csv ./test/ITCGA-UCEC_peptides_9.csv
+    ```
 For MHC-II tasks:
 - Place the `MHC-II` weights folder into the `MHC-II` directory from the GitHub repository.
 - Run the following command:
