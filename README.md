@@ -11,10 +11,9 @@ Ensure the installation of the following dependencies:
 ## Usage
 To run predictions using the OnmiMHC model, follow these steps:
 For MHC-I tasks:
-Download the model weights from this link.
-Place the weights folder into the MHC-I directory.
+- Download the model weights from this link:https://drive.google.com/drive/folders/13NZmHObr3VvkZD59yxFaWjxFVe_wj6ID?usp=sharing.Place the weights folder into the MHC-I directory.
 Run the following command
--python OnmiMHC-I.py --input your_input_file.csv --output your_output_file.csv
+- python OnmiMHC-I.py --input your_input_file.csv --output your_output_file.csv
 
 ## Model Architecture
 OnmiMHC employs two encoding methods: BLOSUM62 and one-hot encoding. The architecture integrates 1D-CNN-LSTM and 2D-CNN models to extract both temporal and spatial features from the sequences. Additionally, the CBAM attention mechanism is applied to enhance feature representation.
