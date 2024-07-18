@@ -9,15 +9,14 @@ Ensure the installation of the following dependencies:
 - matplotlib version: 3.5.3
 
 ## Usage
-To run predictions using the OnmiMHC model, follow these steps:
-1. For MHC-I tasks:
-   - Download the model weights from [this link](https://drive.google.com/drive/folders/13NZmHObr3VvkZD59yxFaWjxFVe_wj6ID?usp=sharing).
-   - Place the `weights` folder into the `MHC-I` directory.
-   - Run the following command:
-     ```bash
-     python OnmiMHC-I.py --input your_input_file.csv --output your_output_file.csv
-     ```
+First, download the model weights from [this link](https://drive.google.com/drive/folders/13NZmHObr3VvkZD59yxFaWjxFVe_wj6ID?usp=sharing). This link contains the model weights for both MHC-I and MHC-II, and additionally, the candidate peptide pool file for UCEC for MHC-I.
 
+For MHC-I tasks:
+- Place the `MHC-I` weights folder into the `MHC-I` directory from the GitHub repository.
+- Run the following command:
+  ```bash
+  python OnmiMHC-I.py --IEDB.csv --./test/IEDB.csv
+  ```
 ## Model Architecture
 OnmiMHC employs two encoding methods: BLOSUM62 and one-hot encoding. The architecture integrates 1D-CNN-LSTM and 2D-CNN models to extract both temporal and spatial features from the sequences. Additionally, the CBAM attention mechanism is applied to enhance feature representation.
 
