@@ -15,13 +15,13 @@ For MHC-I tasks:
 - Place the `MHC-I` weights folder into the `MHC-I` directory from the GitHub repository.
 - Run the following command:
   ```bash
-  python OnmiMHC-I.py IEDB.csv ./test/IEDB.csv
+  python OnmiMHC-I.py IEDB.csv ./test/IEDB_predicted.csv
   ```
 For MHC-II tasks:
 - Place the `MHC-II` weights folder into the `MHC-II` directory from the GitHub repository.
 - Run the following command:
   ```bash
-  python OnmiMHC-II.py IEDB.csv ./test/IEDB.csv
+  python OnmiMHC-II.py IEDB.csv ./test/IEDB_predicted.csv
   ```
 ## Model Architecture
 OnmiMHC employs two encoding methods: BLOSUM62 and one-hot encoding. The architecture integrates 1D-CNN-LSTM and 2D-CNN models to extract both temporal and spatial features from the sequences. Additionally, the CBAM attention mechanism is applied to enhance feature representation.
