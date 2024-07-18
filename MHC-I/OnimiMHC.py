@@ -11,7 +11,6 @@ from torch.utils.data import TensorDataset, DataLoader, WeightedRandomSampler
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 BLO = pd.read_csv(fr'./blosum62.csv', header=None)
 PSEDUO = pd.read_csv(fr'./pseudo.csv')
-print(PSEDUO)
 input_file  = sys.argv[1]
 output_file = sys.argv[2]
 TEST = pd.read_csv(fr'{input_file}')
@@ -20,9 +19,6 @@ merged = F.merge(PSEDUO, how='left', left_on='Allele', right_on='H')
 F['Allele'] = merged['P'].combine_first(F['Allele'])
 peptide_TEST = F['Peptide']
 allele_TEST = F['Allele']
-print(allele_TEST)
-
-
 peptide = peptide_TEST.str.slice(start=-11).str.upper().str.pad(width=11, side='right', fillchar='-')
 allele = allele_TEST.str.pad(width=34, side='right', fillchar='-')
 SEQ = peptide.str.cat(allele, sep='')
@@ -168,8 +164,7 @@ for f in tqdm(range(5)):
             PREDICT.extend(output1.cpu().numpy())
     P.append(PREDICT)
 P = np.mean(P, axis=0)
-TEST['OmniMHC'] = P
-print(TEST)
+TEST['OnmiMHC'] = P
 TEST.to_csv(fr'{output_file}')
 
 
