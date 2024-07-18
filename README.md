@@ -18,7 +18,7 @@ For MHC-I tasks:
   python OnmiMHC-I.py IEDB.csv ./test/IEDB.csv
   ```
 For MHC-II tasks:
-- Place the MHC-II weights folder into the MHC-II directory from the GitHub repository.
+- Place the `MHC-II` weights folder into the `MHC-II` directory from the GitHub repository.
 - Run the following command:
   ```bash
   python OnmiMHC-II.py IEDB.csv ./test/IEDB.csv
