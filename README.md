@@ -1,6 +1,6 @@
 ## Introduction
 OnmiMHC integrates large-scale mass spectrometry data with other relevant data types to achieve superior performance in MHC-I and MHC-II prediction tasks. By combining 1D-CNN-LSTM and 2D-CNN models, OnmiMHC captures both temporal and spatial features of sequences, enhancing the accuracy of peptide-MHC binding predictions.
-
+https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1550252/full
 ## Requirements
 Ensure the installation of the following dependencies:
 - pandas version: 1.3.5
